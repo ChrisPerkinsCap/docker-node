@@ -4,3 +4,17 @@ services:
 
   node:
     image: node:14.14.0-stretch
+    command: "npm start"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - type: volume
+        source: node-work-dir
+        target: /home/node/app
+    expose:
+      - "8081"
+
+volumes:
+  node-work-dir:
