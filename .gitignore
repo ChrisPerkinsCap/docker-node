@@ -1,0 +1,4 @@
+# Ignore and exclude the following files and directories
+
+.idea/
+*.iml
