@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+
+  setup-node:
+    build:
+      context: build
+      dockerfile: build/setup-node.Dockerfile
+      args:
+        maintainer: "me@myco.com"
+        version: ${VERSION}
+    image: chrisperkins/setup-node:${VERSION}
