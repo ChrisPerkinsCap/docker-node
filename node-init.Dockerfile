@@ -17,11 +17,6 @@ WORKDIR /usr/src/app
 # allowing team members to use a variety of methods to install
 # dependancies and generate project files.
 
-# Initialise the project and generate the package.json file
-RUN npm init
-# If you are building your code for production
-# RUN npm ci --only=production
-
 VOLUME /usr/src/app
 
 EXPOSE 8080

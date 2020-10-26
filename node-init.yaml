@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+
+  setup-node:
+
+    container_name: node-init
+
+    command: npm init react-app test
+
+    build:
+      context: ./
+      dockerfile: node-init.Dockerfile
+      args:
+        maintainer: ${MAINTAINER}
+        version: ${VERSION}
+
+    image: chrisperkins/setup-node:${VERSION}
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - type: bind
+        source: ./project
+        target: /usr/src/app
