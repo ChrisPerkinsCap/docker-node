@@ -17,6 +17,10 @@ WORKDIR /usr/src/app
 # allowing team members to use a variety of methods to install
 # dependancies and generate project files.
 
+# Install express-generator
+RUN npm install -g express-generator
+
+
 VOLUME /usr/src/app
 
 EXPOSE 8080

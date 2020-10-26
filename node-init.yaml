@@ -6,7 +6,7 @@ services:
 
     container_name: node-init
 
-    command: npm init ${PROJECT_TYPE} ${PROJECT_NAME}
+    command: ${PROJECT_CREATE_CMD}
 
     build:
       context: ./
