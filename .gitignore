@@ -4,3 +4,4 @@
 *.iml
 
 # Exclude the source directory
+test/

@@ -6,7 +6,7 @@ services:
 
     container_name: node-init
 
-    command: npm init react-app test
+    command: npm init ${PROJECT_TYPE} ${PROJECT_NAME}
 
     build:
       context: ./
@@ -15,7 +15,7 @@ services:
         maintainer: ${MAINTAINER}
         version: ${VERSION}
 
-    image: chrisperkins/setup-node:${VERSION}
+    image: ${REPO}/node-init:${VERSION}
 
     ports:
       - "8080:8080"
