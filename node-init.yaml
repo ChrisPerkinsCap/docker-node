@@ -22,5 +22,5 @@ services:
 
     volumes:
       - type: bind
-        source: ./project
+        source: ./projects
         target: /usr/src/app
