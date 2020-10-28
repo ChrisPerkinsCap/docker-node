@@ -43,6 +43,7 @@ docker-compose --env-file ./.env.init -f ./node-init.yaml up -d
 >For example for an express generated code base:
 
 ```bash
+/(project-root)
 ├── README.md
 ├── cleanup-docker.sh
 ├── node-init.Dockerfile
@@ -66,4 +67,23 @@ docker-compose --env-file ./.env.init -f ./node-init.yaml up -d
             ├── error.pug
             ├── index.pug
             └── layout.pug
+```
+> Or a react application:
+
+```bash
+/(project-root)
+├── README-docker-build.md
+├── cleanup-docker.sh
+├── node-init.Dockerfile
+├── node-init.yaml
+├── node.yaml
+└── projects
+    ├── README-project.md
+    └── my-react-app
+        ├── README.md
+        ├── node_modules
+        ├── package.json
+        ├── public
+        ├── src
+        └── yarn.lock
 ```
