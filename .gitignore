@@ -7,3 +7,6 @@
 test/
 
 # Test Projects
+
+# local testing files
+local-*
